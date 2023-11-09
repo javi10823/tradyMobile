@@ -12,8 +12,6 @@ export const Wrapper = styled.View(() => ({
 
 export const ControllButton = styled.TouchableOpacity(() => ({}));
 
-export const Icon = styled.Image(() => ({}));
-
 export const ProgressContainer = styled.View(() => ({
   flex: 1,
   backgroundColor: '#CEE8D6',

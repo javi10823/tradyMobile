@@ -12,8 +12,6 @@ export const Button = styled.TouchableOpacity(() => ({
   right: -5,
 }));
 
-export const Icon = styled.Image(() => ({}));
-
 export const Title = styled.Text(() => ({
   fontWeight: 'bold',
 }));

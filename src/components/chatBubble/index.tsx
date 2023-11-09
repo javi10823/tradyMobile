@@ -3,7 +3,6 @@ import {
   Body,
   Bubble,
   ContentContainer,
-  Icon,
   InfoContainer,
   InfoText,
   Time,
@@ -13,20 +12,18 @@ import {
 import {ChatBubbleProps} from './types';
 import CallSummary from '../callSummary';
 import Player from '../player';
+// @ts-ignore
+import Call from '../../assets/call.svg';
+// @ts-ignore
+import Message from '../../assets/message.svg';
 
-export default function ChatBubble({
-  image,
-  type,
-  info,
-  body,
-  time,
-}: ChatBubbleProps) {
+export default function ChatBubble({type, info, body, time}: ChatBubbleProps) {
   return (
     <Bubble>
       <Triangle />
       <ContentContainer>
         <InfoContainer>
-          <Icon source={image} />
+          {type === 'Incoming Call' ? <Call /> : <Message />}
           <TypeText>{type}</TypeText>
           <InfoText>{info}</InfoText>
         </InfoContainer>

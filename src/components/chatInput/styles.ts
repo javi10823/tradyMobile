@@ -16,6 +16,10 @@ export const AttachmentButton = styled.TouchableOpacity(() => ({
   borderRadius: 50,
   padding: 10,
   borderColor: '#C2C2C2',
+  width: 40,
+  height: 40,
+  alignItems: 'center',
+  justifyContent: 'center',
 }));
 
 export const Input = styled.TextInput(() => ({
@@ -28,5 +32,3 @@ export const SendButton = styled.TouchableOpacity(() => ({
   borderRadius: 50,
   padding: 11,
 }));
-
-export const Icon = styled.Image(() => ({}));

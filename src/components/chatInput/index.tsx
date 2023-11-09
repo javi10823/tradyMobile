@@ -1,15 +1,19 @@
 import React from 'react';
-import {AttachmentButton, Icon, Input, SendButton, Wrapper} from './styles';
+import {AttachmentButton, Input, SendButton, Wrapper} from './styles';
+// @ts-ignore
+import Attachment from '../../assets/attachment.svg';
+// @ts-ignore
+import Send from '../../assets/send.svg';
 
 export default function ChatInput() {
   return (
     <Wrapper>
       <AttachmentButton>
-        <Icon source={require('../../assets/attachment.png')} />
+        <Attachment />
       </AttachmentButton>
       <Input placeholder="Type Message" />
       <SendButton>
-        <Icon source={require('../../assets/send.png')} />
+        <Send />
       </SendButton>
     </Wrapper>
   );

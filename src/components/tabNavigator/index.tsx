@@ -1,11 +1,21 @@
 /* eslint-disable react/no-unstable-nested-components */
 
 import React from 'react';
-import {Image} from 'react-native';
 import InboxStack from '../inboxNavigator';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import CommingSoon from '../../screens/commingSoon';
+
+//@ts-ignore
+import Home from '../../assets/home.svg';
+//@ts-ignore
+import Pay from '../../assets/pay.svg';
+//@ts-ignore
+import Inbox from '../../assets/inbox.svg';
+//@ts-ignore
+import Jobs from '../../assets/jobs.svg';
+//@ts-ignore
+import More from '../../assets/more.svg';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,18 +30,20 @@ export default function TabNavigator() {
         tabBarIcon: ({}) => {
           switch (route.name) {
             case 'Home':
-              return <Image source={require('../../assets/home-icon.png')} />;
+              return <Home />;
             case 'Pay':
-              return <Image source={require('../../assets/pay-icon.png')} />;
+              return <Pay />;
             case 'Inbox':
-              return <Image source={require('../../assets/inbox-icon.png')} />;
+              return <Inbox />;
+
             case 'Jobs':
-              return <Image source={require('../../assets/jobs-icon.png')} />;
+              return <Jobs />;
+
             case 'More':
-              return <Image source={require('../../assets/more-icon.png')} />;
+              return <More />;
 
             default:
-              return <Image source={require('../../assets/home-icon.png')} />;
+              return null;
           }
         },
       })}>

@@ -1,10 +1,12 @@
 import React from 'react';
-import {Button, Icon, Title} from './styles';
+import {Button, Title} from './styles';
+//@ts-ignore
+import Write from '../../assets/write.svg';
 
 export default function ComposeButton() {
   return (
     <Button>
-      <Icon source={require('../../assets/write.png')} />
+      <Write />
       <Title>Compose</Title>
     </Button>
   );

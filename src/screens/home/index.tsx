@@ -17,7 +17,7 @@ export default function Home({navigation}: any) {
       <ChatCard
         key={index}
         onPress={() => navigation.navigate('Chat')}
-        image={item.image}
+        type={item.type}
         title={item.title}
         time={item.time}
         unread={item.unread}

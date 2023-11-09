@@ -1,12 +1,16 @@
 import React from 'react';
-import {Arrow, Button, Name, UserIcon} from './styles';
+import {Button, Name} from './styles';
+// @ts-ignore
+import ArrowRight from '../../assets/arrow-right.svg';
+// @ts-ignore
+import User from '../../assets/user.svg';
 
 export default function UserCard() {
   return (
     <Button>
-      <UserIcon source={require('../../assets/user.png')} />
+      <User />
       <Name>Jonnathan Wu</Name>
-      <Arrow source={require('../../assets/arrow-right.png')} />
+      <ArrowRight />
     </Button>
   );
 }

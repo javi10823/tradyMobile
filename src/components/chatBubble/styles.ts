@@ -34,8 +34,6 @@ export const InfoContainer = styled.View(() => ({
   marginBottom: 8,
 }));
 
-export const Icon = styled.Image(() => ({}));
-
 export const TypeText = styled.Text(() => ({
   marginLeft: 8,
   flex: 1,

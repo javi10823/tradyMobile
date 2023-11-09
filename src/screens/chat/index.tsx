@@ -9,7 +9,6 @@ export default function Chat() {
   const sectionItem = ({item}: any) => {
     return (
       <ChatBubble
-        image={item.image}
         type={item.type}
         info={item.info}
         body={item.body}

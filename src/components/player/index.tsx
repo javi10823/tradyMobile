@@ -1,15 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {
   ControllButton,
-  Icon,
   ProgressBar,
   ProgressContainer,
   Timer,
   Wrapper,
 } from './styles';
+//@ts-ignore
+import Play from '../../assets/play.svg';
+//@ts-ignore
+import Stop from '../../assets/stop.svg';
 
 // Import the react-native-sound module
-var Sound = require('react-native-sound');
+import Sound from 'react-native-sound';
 
 // Enable playback in silence mode (important to set before playing the sound)
 Sound.setCategory('Playback');
@@ -27,29 +30,29 @@ export default function Player() {
   const [currentTime, setCurrentTime] = useState(0);
   const [playing, setPlaying] = useState(false);
 
-
-  useEffect(() => {
-    setTime(sound.getDuration());
-  
-    // Agregar un efecto de limpieza para el intervalo
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
   let timer: any;
   const handleCurrentTime = () => {
     timer = setInterval(() => {
-      sound.getCurrentTime((seconds: React.SetStateAction<number>, isPlaying: any) => {
-        if (isPlaying) {
-          setCurrentTime(seconds);
-        }
-        if (!isPlaying) {
-          clearInterval(timer);
-        }
-      });
+      sound.getCurrentTime(
+        (seconds: React.SetStateAction<number>, isPlaying: boolean) => {
+          if (isPlaying) {
+            setCurrentTime(seconds);
+          }
+          if (!isPlaying) {
+            clearInterval(timer);
+          }
+        },
+      );
     }, 1000);
   };
+
+  useEffect(() => {
+    setTime(sound.getDuration());
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [timer]);
 
   const pause = () => {
     sound.pause();
@@ -72,13 +75,7 @@ export default function Player() {
   return (
     <Wrapper>
       <ControllButton onPress={playing ? pause : play}>
-        <Icon
-          source={
-            playing
-              ? require('../../assets/stop.png')
-              : require('../../assets/play.png')
-          }
-        />
+        {playing ? <Stop /> : <Play />}
       </ControllButton>
       <ProgressContainer>
         <ProgressBar

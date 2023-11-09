@@ -12,8 +12,6 @@ export const Wrapper = styled.View(() => ({
   paddingVertical: 20,
 }));
 
-export const Icon = styled.Image(() => ({}));
-
 export const Title = styled.Text(() => ({
   marginHorizontal: 8,
   flex: 1,

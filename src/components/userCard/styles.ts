@@ -10,8 +10,6 @@ export const Button = styled.TouchableOpacity(() => ({
   borderRadius: 8,
 }));
 
-export const UserIcon = styled.Image(() => ({}));
-
 export const Name = styled.Text(() => ({
   flex: 1,
   marginLeft: 4,

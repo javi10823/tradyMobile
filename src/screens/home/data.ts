@@ -1,62 +1,63 @@
+// i need to add a type or something to know wich svg render
 export const CHATSDATA = [
   {
-    image: require('../../assets/call.png'),
     title: '(305) 333-444',
     time: '5h',
     unread: true,
+    type: 'call',
   },
   {
-    image: require('../../assets/call.png'),
     title: '(305) 333-444',
     time: '5h',
     unread: true,
+    type: 'call',
   },
   {
-    image: require('../../assets/sms.png'),
     title: '(305) 333-444',
     time: '1m',
     unread: false,
+    type: 'sms',
   },
   {
-    image: require('../../assets/message.png'),
     title: 'domm@trady.com',
     time: '5h',
     readed: false,
+    type: 'message',
   },
   {
-    image: require('../../assets/sms.png'),
     title: '(305) 333-444',
     time: '1m',
     unread: true,
+    type: 'sms',
   },
   {
-    image: require('../../assets/sms.png'),
-    title: '(305) 333-444',
-    time: '1m',
-    unread: false,
-  },
-  {
-    image: require('../../assets/call.png'),
-    title: '(305) 333-444',
-    time: '5h',
-    unread: true,
-  },
-  {
-    image: require('../../assets/call.png'),
-    title: '(305) 333-444',
-    time: '5h',
-    unread: true,
-  },
-  {
-    image: require('../../assets/sms.png'),
     title: '(305) 333-444',
     time: '1m',
     unread: false,
+    type: 'sms',
   },
   {
-    image: require('../../assets/message.png'),
+    title: '(305) 333-444',
+    time: '5h',
+    unread: true,
+    type: 'call',
+  },
+  {
+    title: '(305) 333-444',
+    time: '5h',
+    unread: true,
+    type: 'call',
+  },
+  {
+    title: '(305) 333-444',
+    time: '1m',
+    unread: false,
+    type: 'sms',
+  },
+  {
     title: 'domm@trady.com',
     time: '5h',
     readed: false,
+    type: 'message',
   },
 ];
