@@ -7,11 +7,18 @@ import {
   Timer,
   Wrapper,
 } from './styles';
-import Sound from 'react-native-sound';
 
-const sound = new Sound(require('../../assets/sound/one.mp3'), error => {
+// Import the react-native-sound module
+var Sound = require('react-native-sound');
+
+// Enable playback in silence mode (important to set before playing the sound)
+Sound.setCategory('Playback');
+
+// Loading the sound
+const sound = new Sound(require('../../assets/sound/one.mp3'), (error: any) => {
   if (error) {
     console.log('Failed to load the sound', error);
+    return;
   }
 });
 
@@ -20,14 +27,20 @@ export default function Player() {
   const [currentTime, setCurrentTime] = useState(0);
   const [playing, setPlaying] = useState(false);
 
+
   useEffect(() => {
     setTime(sound.getDuration());
+  
+    // Agregar un efecto de limpieza para el intervalo
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   let timer: any;
   const handleCurrentTime = () => {
     timer = setInterval(() => {
-      sound.getCurrentTime((seconds, isPlaying) => {
+      sound.getCurrentTime((seconds: React.SetStateAction<number>, isPlaying: any) => {
         if (isPlaying) {
           setCurrentTime(seconds);
         }
@@ -48,7 +61,7 @@ export default function Player() {
   const play = () => {
     handleCurrentTime();
     setPlaying(true);
-    sound.play(success => {
+    sound.play((success: any) => {
       if (success) {
         setPlaying(false);
         setCurrentTime(0);
