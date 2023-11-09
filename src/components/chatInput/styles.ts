@@ -25,6 +25,7 @@ export const AttachmentButton = styled.TouchableOpacity(() => ({
 export const Input = styled.TextInput(() => ({
   flex: 1,
   marginLeft: 8,
+  fontFamily: 'Inter-Regular',
 }));
 
 export const SendButton = styled.TouchableOpacity(() => ({

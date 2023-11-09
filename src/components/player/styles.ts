@@ -27,4 +27,5 @@ export const ProgressBar = styled.View(() => ({
 
 export const Timer = styled.Text(() => ({
   color: '#5AB277',
+  fontFamily: 'Inter-SemiBold',
 }));

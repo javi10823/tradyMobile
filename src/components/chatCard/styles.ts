@@ -15,9 +15,12 @@ export const Wrapper = styled.View(() => ({
 export const Title = styled.Text(() => ({
   marginHorizontal: 8,
   flex: 1,
+  fontFamily: 'Inter-Regular',
 }));
 
-export const Time = styled.Text(() => ({}));
+export const Time = styled.Text(() => ({
+  fontFamily: 'Inter-Light',
+}));
 
 export const Notification = styled.View(() => ({
   backgroundColor: '#7A5AF8',

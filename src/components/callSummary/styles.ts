@@ -32,13 +32,16 @@ export const InfoWrapper = styled.View(() => ({
 }));
 
 export const Title = styled.Text(() => ({
-  fontWeight: 'bold',
   marginRight: 8,
   marginBottom: 8,
+  fontFamily: 'Inter-Bold',
 }));
 
 export const PoweredBy = styled.Text(() => ({
   color: '#7A5AF8',
+  fontFamily: 'Inter-Regular',
 }));
 
-export const BulletPoints = styled.Text(() => ({}));
+export const BulletPoints = styled.Text(() => ({
+  fontFamily: 'Inter-Regular',
+}));

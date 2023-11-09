@@ -13,6 +13,7 @@ export const Button = styled.TouchableOpacity(() => ({
 export const Name = styled.Text(() => ({
   flex: 1,
   marginLeft: 4,
+  fontFamily: 'Inter-SemiBold',
 }));
 
 export const Arrow = styled.Image(() => ({}));

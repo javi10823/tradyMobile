@@ -13,5 +13,5 @@ export const Button = styled.TouchableOpacity(() => ({
 }));
 
 export const Title = styled.Text(() => ({
-  fontWeight: 'bold',
+  fontFamily: 'Inter-Bold',
 }));

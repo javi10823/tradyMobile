@@ -37,15 +37,20 @@ export const InfoContainer = styled.View(() => ({
 export const TypeText = styled.Text(() => ({
   marginLeft: 8,
   flex: 1,
-  fontWeight: 'bold',
+  fontFamily: 'Inter-Bold',
 }));
 
-export const InfoText = styled.Text(() => ({}));
+export const InfoText = styled.Text(() => ({
+  fontFamily: 'Inter-Light',
+}));
 
-export const Body = styled.Text(() => ({}));
+export const Body = styled.Text(() => ({
+  fontFamily: 'Inter-Regular',
+}));
 
 export const Time = styled.Text(() => ({
   alignSelf: 'flex-end',
   marginTop: 10,
   color: '#6B6B6B',
+  fontFamily: 'Inter-Light',
 }));

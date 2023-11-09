@@ -11,4 +11,5 @@ export const HeaderButton = styled.TouchableOpacity(() => ({
 export const TextButton = styled.Text(() => ({
   color: '#6B6B6B',
   fontSize: 16,
+  fontFamily: 'Inter-Regular',
 }));

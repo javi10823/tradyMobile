@@ -37,4 +37,5 @@ export const ArchiveButton = styled.TouchableOpacity(() => ({
 
 export const HiddenButtonText = styled.Text(() => ({
   color: 'white',
+  fontFamily: 'Inter-Regular',
 }));

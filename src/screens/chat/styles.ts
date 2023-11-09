@@ -9,4 +9,5 @@ export const List = styled.SectionList(() => ({}));
 export const ListTitle = styled.Text(() => ({
   textAlign: 'center',
   color: '#697586',
+  fontFamily: 'Inter-Regular',
 }));
